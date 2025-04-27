@@ -4,3 +4,4 @@ streamlit
 tensorflow
 numpy
 pandas
+seaborn

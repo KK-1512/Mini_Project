@@ -3,27 +3,27 @@ import pickle
 
 
 
-def get_sepal_length():
-    sepal_length = st.text_input("Sepal Length")
-    return sepal_length
+def get_hardness():
+    hardness = st.text_input("HARDNESS")
+    return hardness
 
-def get_sepal_width():
-    sepal_width = st.text_input("Sepal width")
-    return sepal_width
+def get_toughness():
+    toughness = st.text_input("TOUGHNESS")
+    return toughness
 
-def get_petal_length():
-    petal_length = st.text_input("Petal Length")
-    return petal_length
+def get_density():
+    density = st.text_input("DENSITY")
+    return density
 
-def get_petal_width():
-    petal_width = st.text_input("Petal Width")
-    return petal_width
+def get_yield_stress():
+    yield_stress = st.text_input("YIELD STRESS")
+    return yield_stress
 
 
 
-def predict_species(sl,sw,pl,pw):
-    loaded_model = pickle.load(open('irismodel2.pkl','rb'))
-    new_data = [[float(sl),float(sw),float(pl),float(pw)]]
+def predict_apps(h,t,d,ys):
+    loaded_model = pickle.load(open('mini_project_model.pkl','rb'))
+    new_data = [[float(h),float(t),float(d),float(ys)]]
     prediction = loaded_model.predict(new_data)
     st.write("Prediction with new data: ")
     st.write(prediction)
@@ -32,22 +32,22 @@ def predict_species(sl,sw,pl,pw):
 
 
 if __name__ == "__main__":
-    st.title('Iris Species prediction with Decision Tree model By Krish')
+    st.title('PREDCITION OF APPLICATION USE OF MATERIALS')
     st.image('iris.png')
-    sepal_length = get_sepal_length()
-    sepal_width = get_sepal_width()
-    petal_length = get_petal_length()
-    petal_width = get_petal_width()
+    hardness = get_hardness()
+    toughness = get_toughness()
+    density = get_density()
+    yield_stress = get_yield_stress()
    
     st.write("The parameters you entered are: ")
-    st.write("Sepal length ", sepal_length)
-    st.write("Sepal Width ", sepal_width)
-    st.write("petal length ", petal_length)
-    st.write("petal width ", petal_width)
+    st.write("hardness ", hardness)
+    st.write("toughness ", toughness)
+    st.write("density ", density)
+    st.write("yield stress ", yield_stress)
     
     
 
 
 
 if st.button("Predict"):
-    predict_species(sepal_length, sepal_width, petal_length, petal_width)
+    predict_apps(hardness,toughness,density,yield_stress)

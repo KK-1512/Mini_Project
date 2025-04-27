@@ -1,4 +1,4 @@
-mlfow
+mlflow
 scikit-learn
 streamlit
 tensorflow

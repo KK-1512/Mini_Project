@@ -4,19 +4,19 @@ import pickle
 
 
 def get_hardness():
-    hardness = st.text_input("Sepal Length")
+    hardness = st.text_input("HARDNESS")
     return hardness
 
 def get_toughness():
-    toughness = st.text_input("Sepal width")
+    toughness = st.text_input("TOUGHNESS")
     return toughness
 
 def get_density():
-    density = st.text_input("Petal Length")
+    density = st.text_input("DENSITY")
     return density
 
 def get_yield_stress():
-    yield_stress = st.text_input("Petal Width")
+    yield_stress = st.text_input("YIELD STRESS")
     return yield_stress
 
 
@@ -40,10 +40,10 @@ if __name__ == "__main__":
     yield_stress = get_yield_stress()
    
     st.write("The parameters you entered are: ")
-    st.write("Sepal length ", hardness)
-    st.write("Sepal Width ", toughness)
-    st.write("petal length ", density)
-    st.write("petal width ", yield_stress)
+    st.write("HARDNESS ", hardness)
+    st.write("TOUGHNESS ", toughness)
+    st.write("DENSITY ", density)
+    st.write("YIELD STRESS", yield_stress)
     
     
 

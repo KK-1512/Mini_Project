@@ -32,18 +32,18 @@ def predict_material(h,t,d,y):
 
 
 if __name__ == "__main__":
-    st.title('Iris Species prediction with Decision Tree model By Krish')
-    st.image('iris.png')
-    sepal_length = get_hardness()
-    sepal_width = get_toughness()
-    petal_length = get_density()
-    petal_width = get_yield_stress()
+    st.title('Material Selection')
+    st.image('app.png')
+    hardness = get_hardness()
+    toughness = get_toughness()
+    density = get_density()
+    yield_stress = get_yield_stress()
    
     st.write("The parameters you entered are: ")
-    st.write("Sepal length ", sepal_length)
-    st.write("Sepal Width ", sepal_width)
-    st.write("petal length ", petal_length)
-    st.write("petal width ", petal_width)
+    st.write("Sepal length ", hardness)
+    st.write("Sepal Width ", toughness)
+    st.write("petal length ", density)
+    st.write("petal width ", yield_stress)
     
     
 

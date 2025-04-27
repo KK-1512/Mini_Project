@@ -34,20 +34,20 @@ def predict_apps(h,t,d,ys):
 if __name__ == "__main__":
     st.title('PREDCITION OF APPLICATION USE OF MATERIALS')
     st.image('app.png')
-    hardness = get_hardness()
-    toughness = get_toughness()
-    density = get_density()
-    yield_stress = get_yield_stress()
+    hardness_value = get_hardness()
+    toughness_value = get_toughness()
+    density_value = get_density()
+    yield_stress_value = get_yield_stress()
    
     st.write("The parameters you entered are: ")
-    st.write("hardness ", hardness)
-    st.write("toughness ", toughness)
-    st.write("density ", density)
-    st.write("yield stress ", yield_stress)
+    st.write("hardness ", hardness_value)
+    st.write("toughness ", toughness_value)
+    st.write("density ", density_value)
+    st.write("yield stress ", yield_stress_value)
     
     
 
 
 
 if st.button("Predict"):
-    predict_apps(hardness,toughness,density,yield_stress)
+    predict_apps(hardness_value,toughness_value,density_value,yield_stress_value)

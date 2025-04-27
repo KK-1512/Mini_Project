@@ -4,26 +4,26 @@ import pickle
 
 
 def get_hardness():
-    sepal_length = st.text_input("Sepal Length")
-    return sepal_length
+    hardness = st.text_input("Sepal Length")
+    return hardness
 
 def get_toughness():
-    sepal_width = st.text_input("Sepal width")
-    return sepal_width
+    toughness = st.text_input("Sepal width")
+    return toughness
 
-def get_petal_length():
-    petal_length = st.text_input("Petal Length")
-    return petal_length
+def get_density():
+    density = st.text_input("Petal Length")
+    return density
 
-def get_petal_width():
-    petal_width = st.text_input("Petal Width")
-    return petal_width
+def get_yield_stress():
+    yield_stress = st.text_input("Petal Width")
+    return yield_stress
 
 
 
-def predict_species(sl,sw,pl,pw):
-    loaded_model = pickle.load(open('irismodel2.pkl','rb'))
-    new_data = [[float(sl),float(sw),float(pl),float(pw)]]
+def predict_material(h,t,d,y):
+    loaded_model = pickle.load(open('mini_project_model.pkl','rb'))
+    new_data = [[float(h),float(t),float(d),float(y)]]
     prediction = loaded_model.predict(new_data)
     st.write("Prediction with new data: ")
     st.write(prediction)
@@ -34,10 +34,10 @@ def predict_species(sl,sw,pl,pw):
 if __name__ == "__main__":
     st.title('Iris Species prediction with Decision Tree model By Krish')
     st.image('iris.png')
-    sepal_length = get_sepal_length()
-    sepal_width = get_sepal_width()
-    petal_length = get_petal_length()
-    petal_width = get_petal_width()
+    sepal_length = get_hardness()
+    sepal_width = get_toughness()
+    petal_length = get_density()
+    petal_width = get_yield_stress()
    
     st.write("The parameters you entered are: ")
     st.write("Sepal length ", sepal_length)
@@ -50,5 +50,5 @@ if __name__ == "__main__":
 
 
 if st.button("Predict"):
-    predict_species(sepal_length, sepal_width, petal_length, petal_width)
+    predict_material(hardness, toughness, density, yield_stress)
     

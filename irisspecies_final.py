@@ -3,11 +3,11 @@ import pickle
 
 
 
-def get_sepal_length():
+def get_hardness():
     sepal_length = st.text_input("Sepal Length")
     return sepal_length
 
-def get_sepal_width():
+def get_toughness():
     sepal_width = st.text_input("Sepal width")
     return sepal_width
 

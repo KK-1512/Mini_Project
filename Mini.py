@@ -33,7 +33,7 @@ def predict_apps(h,t,d,ys):
 
 if __name__ == "__main__":
     st.title('PREDCITION OF APPLICATION USE OF MATERIALS')
-    st.image('iris.png')
+    st.image('app.png')
     hardness = get_hardness()
     toughness = get_toughness()
     density = get_density()

@@ -15,7 +15,7 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras.utils import to_categorical
 
 # Load Dataset
-df = pd.read_csv('/content/material_desc.csv')  # <-- Make sure file is in correct path
+df = pd.read_csv('material_desc.csv')  # <-- Make sure file is in correct path
 df = df.dropna()
 
 # Define Features and Target
